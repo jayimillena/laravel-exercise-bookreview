@@ -3,9 +3,9 @@
 @section('content')
     <h1 class="mb-10 text-2xl">Books</h1>
 
-    <form action="GET" action="{{ route('books.index') }}">
-        <input type="text" name="title" placeholder="Search by title" value="{{ $request('title') }}" class="input">
-        <button type="submit" class=".btn">Search</button>
+    <form method="GET" action="{{ route('books.index') }}" class="mb-4 flex items-center space-x-2">
+        <input type="text" name="title" placeholder="Search by title" value="{{ request('title') }}" class="input">
+        <button type="submit" class="btn">Search</button>
         <a href="{{ route('books.index') }}">Clear</a>
     </form>
 
